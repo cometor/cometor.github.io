@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Geek | Cometor]]></title>
+  <link href="http://cometor.github.io/blog/categories/geek/atom.xml" rel="self"/>
+  <link href="http://cometor.github.io/"/>
+  <updated>2013-12-03T19:57:28+08:00</updated>
+  <id>http://cometor.github.io/</id>
+  <author>
+    <name><![CDATA[cometor]]></name>
+    <email><![CDATA[xiaqz2nd@163.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Blog 开张了！]]></title>
+    <link href="http://cometor.github.io/blog/2013/09/21/blog-kai-zhang-liao-%21/"/>
+    <updated>2013-09-21T18:18:00+08:00</updated>
+    <id>http://cometor.github.io/blog/2013/09/21/blog-kai-zhang-liao-!</id>
+    <content type="html"><![CDATA[<p>GitHub不时被墙，还好我有GoAgent。经过一番痛苦的折腾，终于把我的blog建好了，呵呵！</p>
+]]></content>
+  </entry>
+  
+</feed>

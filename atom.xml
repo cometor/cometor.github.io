@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Cometor]]></title>
+  <link href="http://cometor.github.io/atom.xml" rel="self"/>
+  <link href="http://cometor.github.io/"/>
+  <updated>2013-12-03T19:57:28+08:00</updated>
+  <id>http://cometor.github.io/</id>
+  <author>
+    <name><![CDATA[cometor]]></name>
+    <email><![CDATA[xiaqz2nd@163.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[淘金币领取攻略]]></title>
+    <link href="http://cometor.github.io/blog/2013/12/03/tao-jin-bi-ling-qu-gong-lue/"/>
+    <updated>2013-12-03T19:16:03+08:00</updated>
+    <id>http://cometor.github.io/blog/2013/12/03/tao-jin-bi-ling-qu-gong-lue</id>
+    <content type="html"><![CDATA[<p>自己总结的淘金币领取方法，希望双12能用的上。</p>
+
+<h2>一次性领取</h2>
+
+<p>以下方式仅能领取一次。</p>
+
+<ul>
+<li>安装<a href="http://www.taobao.com/go/act/taoban_3.php">淘伴</a>客户端，并登录，可获得<code>80</code>淘金币。</li>
+<li>参加<a href="http://jf.tianxia.taobao.com/taojinbi.htm">淘代码体验之旅</a>活动。按照页面提示信息输入淘代码，可领取2次淘金币，共<code>50</code>个。</li>
+<li>在<a href="http://vip.taobao.com/new.htm">淘宝新会员</a>页面完成任务，每完成1个任务可以领取<code>50</code>个淘金币。</li>
+<li>在淘宝网购物8笔以下的会员，可通过<a href="http://vip.taobao.com/newuser/common_view.htm?code=taojinbi">淘金币新人大礼包</a>，领取淘金币<code>50</code>个。</li>
+</ul>
+
+
+<h2>每日领取</h2>
+
+<p>以下方式每日可以领取一次。</p>
+
+<ul>
+<li>登录<a href="http://www.taobao.com/">淘宝网</a>，在“我的淘宝”页面，可领取淘金币<code>5</code>个。次日连续领取会递增5个，<code>20</code>个封顶。领取一旦间断恢复从5个开始。</li>
+<li>登录<a href="http://msoft.taobao.com/">淘宝</a>客户端，在“领金币”处可领淘金币<code>5</code>个。次日连续领取会递增5个，<code>20</code>个封顶。领取一旦间断恢复从5个开始。</li>
+<li>登录<a href="http://www.taobao.com/go/act/taoban_3.php">淘伴</a>客户端，打开“淘金币”链接。
+
+<ul>
+<li>每日可领淘金币<code>5</code>个。次日连续领取会递增5个，<code>20</code>个封顶。领取一旦间断恢复从5个开始。</li>
+<li>每日可参加摇奖1次，根据摇奖结果可获得<code>1</code>至<code>10</code>个淘金币。</li>
+</ul>
+</li>
+<li>登录<a href="http://ops.wangxin.taobao.com/ops/trycenter/index.htm">旺信</a>客户端，在“摇钱树”处可获取淘金币。每日可以摇奖多次，只能领取1次，可获得<code>5</code>至<code>10</code>个淘金币。</li>
+<li>参加<a href="http://www.taobao.com/go/act/taojinbi/totole.php">“太太乐”乐享美味</a>活动，可领取<code>5</code>个淘金币。</li>
+<li>店铺分享、收藏店铺、喜欢商品，每日最多各领取淘金币<code>25</code>个，合计<code>75</code>个。方法参见 <a href="http://www.luck4ever.net/2013/10/taojinbi-50.html">http://www.luck4ever.net/2013/10/taojinbi-50.html</a>。另外，在百度<a href="http://tieba.baidu.com/f?kw=%CC%D4%BD%F0%B1%D2">淘金币吧</a>，有时也有网友分享能够获取淘金币的店铺。</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress 搭建 Blog 指南]]></title>
+    <link href="http://cometor.github.io/blog/2013/10/10/octopress-da-jian-blog-zhi-nan/"/>
+    <updated>2013-10-10T21:53:00+08:00</updated>
+    <id>http://cometor.github.io/blog/2013/10/10/octopress-da-jian-blog-zhi-nan</id>
+    <content type="html"><![CDATA[<p><a href="http://octopress.org/">Octopress</a>是基于<a href="https://github.com/mojombo/jekyll">Jekyll</a>的静态Blog系统，支持以<a href="http://wowubuntu.com/markdown/">Markdown</a>语法快速书写Blog，被誉为“A blogging framework for hackers”。利用Octopress可以很方便地搭建和部署个人的Blog。下面简单介绍在OS X 10.8下搭建个人Blog，并部署到<a href="https://github.com">GitHub</a>的过程。</p>
+
+<h2>安装Ruby</h2>
+
+<p>根据Octopress官网的说明，必须安装Ruby 1.9.3，假定OS X上已经安装了Git和RVM，接下来安装Ruby 1.9.3：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm install 1.9.3
+</span><span class='line'>rvm use 1.9.3 --default</span></code></pre></td></tr></table></div></figure>
+
+
+<p>安装完成后，执行<code>ruby -v</code>，确认默认Ruby版本为1.9.3。</p>
+
+<h2>安装Octopress</h2>
+
+<p>首先，将Octopress克隆到本地：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后，安装依赖：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd octopress
+</span><span class='line'>gem install bundler
+</span><span class='line'>bundle install</span></code></pre></td></tr></table></div></figure>
+
+
+<p>最后，安装默认主题：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>配置Octopress</h2>
+
+<p>接着需要对Octopress做个最简单的配置。</p>
+
+<p>在Octopress目录下，用编辑器打开<code>_config.yml</code>文件，这个也是Jekyll的配置文件。先配置<code>url</code>、<code>title</code>、<code>subtitle</code>几项，其他配置项后面再说：</p>
+
+<ul>
+<li>url：Blog的网址。由于我们准备部署到GitHub上，一般配置为<code>http://username.github.io</code>。这里需要把<code>username</code>替换成你需要的名称。</li>
+<li>title：Blog的主标题。</li>
+<li>subtitle：Blog的副标题。</li>
+</ul>
+
+
+<h2>部署到GitHub Pages</h2>
+
+<p>接下来，可以把Octopress部署到国外免费的云上，常见的选择有<a href="http://pages.github.com/">GitHub Pages</a>或者<a href="https://www.heroku.com/%E2%80%8E">Heroku</a>。这里我选择部署到GitHub Pages上。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Blog 开张了！]]></title>
+    <link href="http://cometor.github.io/blog/2013/09/21/blog-kai-zhang-liao-%21/"/>
+    <updated>2013-09-21T18:18:00+08:00</updated>
+    <id>http://cometor.github.io/blog/2013/09/21/blog-kai-zhang-liao-!</id>
+    <content type="html"><![CDATA[<p>GitHub不时被墙，还好我有GoAgent。经过一番痛苦的折腾，终于把我的blog建好了，呵呵！</p>
+]]></content>
+  </entry>
+  
+</feed>
