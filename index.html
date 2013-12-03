@@ -238,9 +238,64 @@
 </ul>
 
 
+<h2>发布博文</h2>
+
+<p>接下来，发布一篇博文。这里使用<code>rake new_post</code>命令，后面跟上文章的标题。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["title"]
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>文章的标题支持中文。如果执行时提示无效字符，可以通过命令<code>export LANG=zh_cn.utf-8</code>配置环境变量解决。</p>
+
+<p>执行后，会生成一个以当前日期和指定标题命名的Markdown文档，形如<code>YYYY-MM-DD-title.markdown</code>。文档的位置在<code>source/_posts/</code>下。Octopress要求，所有的博文必须保存在该处。</p>
+
+<p>打开该文档，文档头部包含了一些描述文档的元数据。在元数据下面就可以使用Markdown语法写博文了。</p>
+
+<p>博文编写完成后，需要由Markdown文档生成静态Html页面：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后，可以在本地预览最终的Blog：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake preview</span></code></pre></td></tr></table></div></figure>
+
+
+<p>执行后，会在本地启动一个Web服务器，默认端口4000。可以在浏览器中访问<code>http://localhost:4000</code>查看Blog的效果。</p>
+
 <h2>部署到GitHub Pages</h2>
 
 <p>接下来，可以把Octopress部署到国外免费的云上，常见的选择有<a href="http://pages.github.com/">GitHub Pages</a>或者<a href="https://www.heroku.com/%E2%80%8E">Heroku</a>。这里我选择部署到GitHub Pages上。</p>
+
+<p>首先需要在GitHub上新建一个repo仓库，仓库名称设置为<code>username.github.io</code>。即Octopress配置文件<code>_config.yml</code>里<code>url</code>的名称。</p>
+
+<p>建好仓库后，我们生成待部署的内容：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
+
+
+<p>命令执行时会要求你输入仓库的url，根据提示，进行输入即可。完成后，会生成一个名为<code>_deploy</code>的目录。</p>
+
+<p>最后生成整个Blog，并部署到仓库中：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>完成了，现在可以通过<code>http://username.github.io</code>来访问Blog啦！</p>
+
+<h2>更换主题</h2>
+
+<p>对于Octopress的默认主题不满意？也没关系，这里收集了大量的第三方主题：<a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes</a>。每个主题都有预览和详细说明。</p>
+
+<p>BTW：本Blog使用的是<a href="https://github.com/shashankmehta/greyshade">Greyshade</a>主题。</p>
 
 		
 		
@@ -297,6 +352,19 @@
 
 Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
 			
+
+<script type="text/javascript">
+      var disqus_shortname = 'xiaqz2nd';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 
