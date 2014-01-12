@@ -4,7 +4,7 @@
   <title><![CDATA[Cometor]]></title>
   <link href="http://cometor.github.io/atom.xml" rel="self"/>
   <link href="http://cometor.github.io/"/>
-  <updated>2013-12-03T21:27:19+08:00</updated>
+  <updated>2014-01-12T18:05:51+08:00</updated>
   <id>http://cometor.github.io/</id>
   <author>
     <name><![CDATA[cometor]]></name>
@@ -12,6 +12,75 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[2014新年好]]></title>
+    <link href="http://cometor.github.io/blog/2014/01/12/2014xin-nian-hao/"/>
+    <updated>2014-01-12T17:44:21+08:00</updated>
+    <id>http://cometor.github.io/blog/2014/01/12/2014xin-nian-hao</id>
+    <content type="html"><![CDATA[<p>2014年了，为迎接新年，我们用Ruby打印出数字2014，但是代码里不能有任何数字。</p>
+
+<p>让我们开始吧！</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">p</span> <span class="no">Time</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">year</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>看起来很普通，下面继续：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Happy</span> <span class="o">=</span> <span class="no">Time</span>
+</span><span class='line'><span class="no">Happy</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">year</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>有点儿意思了，接下来：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Happy</span> <span class="o">=</span> <span class="no">Time</span>
+</span><span class='line'><span class="no">Class</span> <span class="no">Time</span>
+</span><span class='line'>  <span class="k">alias</span> <span class="n">year!</span> <span class="n">year</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Happy</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">year!</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>还不错，但是为什么需要圆点(dot)呢？还是去掉好了。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">noop</span> <span class="n">x</span><span class="o">=</span><span class="kp">nil</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="k">alias</span> <span class="kp">new</span> <span class="n">noop</span>
+</span><span class='line'><span class="k">alias</span> <span class="n">year!</span> <span class="n">noop</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">Happy</span> <span class="n">x</span>
+</span><span class='line'>  <span class="nb">p</span> <span class="no">Time</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">year</span> 
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Happy</span> <span class="kp">new</span> <span class="n">year!</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>完成了，这下看起来很Cool吧！</p>
+
+<p>祝大家2014年新年快乐~</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[淘金币领取攻略]]></title>

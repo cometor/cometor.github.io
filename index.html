@@ -9,9 +9,11 @@
 	<meta name="author" content="cometor">
 
 	
-	<meta name="description" content="Dec 3rd, 2013 淘金币领取攻略 自己总结的淘金币领取方法，希望双12能用的上。 一次性领取 以下方式仅能领取一次。 安装淘伴客户端，并登录，可获得80淘金币。
-参加淘代码体验之旅活动。按照页面提示信息输入淘代码，可领取2次淘金币，共50个。
-在淘宝新会员页面完成任务， &hellip;">
+	<meta name="description" content="Jan 12th, 2014 2014新年好 2014年了，为迎接新年，我们用Ruby打印出数字2014，但是代码里不能有任何数字。 让我们开始吧！ 1
+p Time.new.year 看起来很普通，下面继续： 1
+2
+Happy = Time
+Happy.new.year 有点儿意思了，接下来 &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,6 +97,97 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-12T17:44:21+08:00" data-updated="true" itemprop="datePublished">Jan 12<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/01/12/2014xin-nian-hao/" itemprop="url">2014新年好</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>2014年了，为迎接新年，我们用Ruby打印出数字2014，但是代码里不能有任何数字。</p>
+
+<p>让我们开始吧！</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">p</span> <span class="no">Time</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">year</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>看起来很普通，下面继续：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Happy</span> <span class="o">=</span> <span class="no">Time</span>
+</span><span class='line'><span class="no">Happy</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">year</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>有点儿意思了，接下来：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Happy</span> <span class="o">=</span> <span class="no">Time</span>
+</span><span class='line'><span class="no">Class</span> <span class="no">Time</span>
+</span><span class='line'>  <span class="k">alias</span> <span class="n">year!</span> <span class="n">year</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Happy</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">year!</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>还不错，但是为什么需要圆点(dot)呢？还是去掉好了。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">noop</span> <span class="n">x</span><span class="o">=</span><span class="kp">nil</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="k">alias</span> <span class="kp">new</span> <span class="n">noop</span>
+</span><span class='line'><span class="k">alias</span> <span class="n">year!</span> <span class="n">noop</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">Happy</span> <span class="n">x</span>
+</span><span class='line'>  <span class="nb">p</span> <span class="no">Time</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">year</span> 
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Happy</span> <span class="kp">new</span> <span class="n">year!</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>完成了，这下看起来很Cool吧！</p>
+
+<p>祝大家2014年新年快乐~</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -346,7 +439,7 @@
 </nav></div>
 			</div>
 			<footer id="footer" class="inner"><p>
-  Copyright &copy; 2013 - cometor -
+  Copyright &copy; 2014 - cometor -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
